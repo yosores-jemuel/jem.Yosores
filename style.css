@@ -1,0 +1,747 @@
+/*========== Google Fonts ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*========== Base ==========*/
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 30px;
+  color: var(--text-color);
+  display: none;
+  cursor: pointer;
+}
+
+/* Home Section Layout */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img img{
+  width: 35vw;
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+  color: #bdbdbd;
+  margin: 20px 0 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 38px;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00b8d4;
+  color: #fff;
+}
+
+/* Home Content */
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h3 span {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+.home-content span {
+  color: var(--main-color);
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--main-color);
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+
+
+.home-img img {
+  width: 35vw;
+  animation: floatImage 40s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+/* About Section Layout */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background: var(--second-bg-color);
+  padding: 100px 8% 100px;
+}
+
+.about-hexagon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hexagon .hexagon {
+  animation-delay: 0.5s;
+}
+
+.hexagon {
+  width: 320px;
+  height: 360px;
+  background: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: dropDownHex 1.2s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+}
+
+.hexagon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: 6px solid #00eaff;
+  border-radius: 0;
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%, 75% 94%,
+    25% 94%, 0% 50%
+  );
+  box-shadow: 0 0 40px #00eaff, 0 0 80px #00eaff33;
+  z-index: 1;
+}
+
+.hexagon img {
+  width: 92%;
+  height: 92%;
+  object-fit: cover;
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%, 75% 94%,
+    25% 94%, 0% 50%
+  );
+  position: relative;
+  z-index: 2;
+}
+
+/* Add this for drop-down animation */
+@keyframes dropDownHex {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.8);
+    box-shadow: 0 0 0 #00eaff;
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.05);
+    box-shadow: 0 0 60px #00eaff, 0 0 120px #00eaff33;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 40px #00eaff, 0 0 80px #00eaff33;
+  }
+}
+
+/* About Content */
+.about-content {
+  max-width: 600px;
+}
+
+.about-content .heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.about-content .heading span {
+  color: var(--main-color);
+}
+
+.about-content h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.about-content .btn {
+  padding: 12px 36px;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 4% 60px;
+  }
+  .about-content {
+    margin-top: 30px;
+  }
+}
+
+.services {
+  background: var(--bg-color);
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.services-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: .5s ease;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.services-box i {
+  font-size: 5rem;
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  color: var(--main-color);
+}
+
+
+
+.services-box h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.services-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #bdbdbd;
+  margin-bottom: 2rem;
+}
+
+/* More sections like portfolio, contact, and footer follow similar structure and colors */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+  .home-img img,
+  .about-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    display: none;
+    flex-direction: column;
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .navbar a {
+    padding: 1rem;
+    display: block;
+    text-align: center;
+  }
+  section {
+    padding: 8rem 5% 2rem;
+  }
+  .home, .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Contact Section */
+.contact {
+  background: var(--second-bg-color);
+  padding: 100px 9% 100px;
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  margin: 10px 0;
+  resize: none;
+}
+
+.contact form .input-box input {
+  width: 48%;
+}
+
+.contact form .btn {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Responsive: stack inputs on smaller screens */
+@media (max-width: 768px) {
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+
+/* Portfolio Section */
+.portfolio {
+  background: var(--bg-color);
+}
+
+.portfolio h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  padding: 0 2rem;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem var(--bg-color);
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.portfolio-layer p {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0.5rem 0 1rem;
+}
+
+.portfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.portfolio-layer a i {
+  font-size: 20px;
+  color: var(--second-bg-color);
+}
+
+.footer {
+  background: var(--second-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.footer-sci {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--main-color);
+  transition: 0.5s ease;
+}
+
+.footer-sci a:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+/* Hexagon Image */
+.hexagon {
+  width: 340px;
+  height: 380px;
+  background: #00eaff;
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%, 75% 94%,
+    25% 94%, 0% 50%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px #00eaff, 0 0 120px #00eaff33;
+}
+
+.hexagon img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 0 40px #00eaff55;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 4%;
+    text-align: center;
+  }
+  .hexagon {
+    margin-top: 40px;
+  }
+}
+
+
+/* Glowing hexagon effect for profile/about image */
+.hexagon {
+  position: relative;
+  width: 340px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    25% 6%, 75% 6%,
+    100% 50%, 75% 94%,
+    25% 94%, 0% 50%
+  );
+  background: transparent;
+  z-index: 1;
+}
+
+.hexagon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, var(--main-color) 60%, transparent 100%);
+  filter: blur(24px);
+  opacity: 0.7;
+  pointer-events: none;
+  clip-path: inherit;
+}
+
+.hexagon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 6px solid var(--main-color);
+  clip-path: inherit;
+  box-shadow: 0 0 20px var(--main-color);
+  z-index: 2;
+}
+
+.hexagon img {
+  width: 92%;
+  height: 92%;
+  object-fit: cover;
+  clip-path: inherit;
+  position: relative;
+  z-index: 3;
+}
+
+/* Smooth, rounded hexagon edge */
+.hexagon,
+.hexagon::before,
+.hexagon::after,
+.hexagon img {
+  clip-path: polygon(
+    30% 7%, 70% 7%,
+    93% 25%, 93% 75%,
+    70% 93%, 30% 93%,
+    7% 75%, 7% 25%
+  );
+  border-radius: 18px; /* adds subtle rounding */
+}
+
+/* Glowing background for hexagon */
+.hexagon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, #00b8d4 60%, transparent 100%);
+  filter: blur(32px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Hexagon border */
+.hexagon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #00eaff;
+  box-shadow: 0 0 40px #00eaff, 0 0 80px #00eaff33;
+  z-index: 2;
+}
+
+/* Image inside hexagon */
+.hexagon img {
+  width: 92%;
+  height: 92%;
+  object-fit: cover;
+  position: relative;
+  z-index: 3;
+}
